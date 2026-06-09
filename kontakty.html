@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktujte nás | SPŠE Prešov</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- HLAVIČKA STRÁNKY -->
+    <header>
+        <div class="header-content">
+            <!-- Tlačidlo pre burger menu na mobile -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Zmeň navigáciu">☰</button>
+
+            <!-- Názov školy s odkazom na úvodnú stránku -->
+            <h1>
+                <a href="PolrocnyProjekt.html" title="Návrat na domovskú stránku">
+                    SPŠE Prešov
+                </a>
+            </h1>
+
+            <!-- LOGO ŠKOLY -->
+            <div class="logo">
+                <a href="PolrocnyProjekt.html" title="Návrat na úvodnú stránku">
+                    <img src="logo.png" alt="Logo SPŠE Prešov">
+                </a>
+            </div>
+        </div>
+
+        <!-- NAVIGAČNÉ MENU -->
+        <nav id="mainNav" class="nav-menu">
+            <ul>
+                <li><a href="PolrocnyProjekt.html">Úvod</a></li>
+                <li><a href="Onas.html">O nás</a></li>
+                <li><a href="Galeria.html">Galéria</a></li>
+                <li><a href="kontakty.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HLAVNÝ OBSAH STRÁNKY -->
+    <div class="container main-content">
+
+        <!-- HLAVNÁ ČASŤ OBSAHU -->
+        <main role="main">
+            <!-- Nadpis kontaktnej stránky -->
+            <h2>Napíšte nám</h2>
+
+            <!-- Úvodný text formulára -->
+            <p>
+                <strong>
+                    Máte otázky ohľadom štúdia alebo spolupráce?
+                    Sme tu pre vás. Vyplňte formulár a my sa vám ozveme čo najskôr.
+                </strong>
+            </p>
+
+            <!-- KONTAKTNÝ FORMULÁR -->
+            <form id="contactForm" action="#" method="post" novalidate>
+
+                <!-- Meno a priezvisko -->
+                <div class="form-group">
+                    <label for="meno">Vaše meno a priezvisko:<span class="required">*</span></label>
+                    <input 
+                        type="text"
+                        id="meno"
+                        name="meno"
+                        minlength="5"
+                        maxlength="128"
+                        placeholder="napr. Ján Hrach"
+                        required
+                    > 
+                    <span class="error-message" id="menoError"></span>
+                </div>
+
+                <!-- E-mailová adresa -->
+                <div class="form-group">
+                    <label for="email">E-mailová adresa:<span class="required">*</span></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        maxlength="256"
+                        placeholder="vas@email.sk"
+                        required
+                    > 
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <!-- Telefónne číslo (voliteľné pole) -->
+                <div class="form-group">
+                    <label for="tel">Telefónne číslo:</label>
+                    <input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        minlength="7"
+                        placeholder="+421 ..."
+                    > 
+                    <span class="error-message" id="telError"></span>
+                </div>
+
+                <!-- Predmet správy -->
+                <div class="form-group">
+                    <label for="predmet">Predmet správy:<span class="required">*</span></label>
+                    <input
+                        type="text"
+                        id="predmet"
+                        name="predmet"
+                        minlength="3"
+                        maxlength="128"
+                        placeholder="O čo ide?"
+                        required
+                    > 
+                    <span class="error-message" id="predmetError"></span>
+                </div>
+
+                <!-- Text správy -->
+                <div class="form-group">
+                    <label for="sprava">Vaša správa:<span class="required">*</span></label>
+                    <textarea
+                        id="sprava"
+                        name="sprava"
+                        minlength="5"
+                        placeholder="Sem napíšte vaše otázky..."
+                        required
+                    ></textarea> 
+                    <span class="error-message" id="spravaError"></span>
+                </div>
+
+                <!-- Odosielacie tlačidlo -->
+                <button type="submit" class="submit-btn">Odoslať</button>
+                <div id="submitMessage" class="submit-message"></div>
+            </form>
+
+            <!-- KONTAKTNÉ INFORMÁCIE ŠKOLY -->
+            <div class="contact-info">
+                <h3>Kde nás nájdete?</h3>
+                <p><strong>Adresa:</strong> Plzenská 1, 080 47 Prešov</p>
+                <p><strong>Sekretariát:</strong> <a href="mailto:spse@spsepov.sk">spse@spsepov.sk</a></p>
+                <p><strong>Telefónna ústredňa:</strong> <a href="tel:+421517723511">051/772 35 11</a></p>
+                <p><em>Úradné hodiny: Po–Pi (7:30 – 15:30)</em></p>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- PÄTIČKA STRÁNKY -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <!-- Informácia o autorovi a projekte -->
+            <p>&copy; 2026 Matej Kravec | Koncoročný projekt z TWS</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT PRE INTERAKTIVITU -->
+    <script src="script.js"></script>
+</body>
+</html>

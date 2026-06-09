@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galéria | Nazri do života na SPŠE Prešov</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- HLAVIČKA STRÁNKY -->
+    <header>
+        <div class="header-content">
+            <!-- Tlačidlo pre burger menu na mobile -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Zmeň navigáciu">☰</button>
+
+            <!-- Názov školy s odkazom na úvodnú stránku -->
+            <h1>
+                <a href="PolrocnyProjekt.html" title="Návrat na domovskú stránku">
+                    SPŠE Prešov
+                </a>
+            </h1>
+
+            <!-- LOGO ŠKOLY -->
+            <div class="logo">
+                <a href="PolrocnyProjekt.html" title="Návrat na úvodnú stránku">
+                    <img src="logo.png" alt="Logo SPŠE Prešov">
+                </a>
+            </div>
+        </div>
+
+        <!-- NAVIGAČNÉ MENU -->
+        <nav id="mainNav" class="nav-menu">
+            <ul>
+                <li><a href="PolrocnyProjekt.html">Úvod</a></li>
+                <li><a href="Onas.html">O nás</a></li>
+                <li><a href="Galeria.html">Galéria</a></li>
+                <li><a href="kontakty.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HLAVNÝ OBSAH STRÁNKY -->
+    <div class="container main-content">
+
+        <!-- HLAVNÁ ČASŤ OBSAHU -->
+        <main role="main">
+            <!-- Nadpis galérie -->
+            <h2>Život na našej škole objektívom</h2>
+
+            <!-- Úvodný text galérie -->
+            <p>
+                Pozri si, ako to u nás vyzerá. Od moderných labákov, kde vznikajú tvoje projekty,
+                až po miesta, kde si po škole vydýchneš.
+            </p>
+
+            <!-- GALÉRIA FOTOGRAFIÍ (GRID ROZLOŽENIE) -->
+            <div class="gallery-grid">
+
+                <!-- KARTA S FOTOGRAFIOU – BUDOVA ŠKOLY -->
+                <div class="photo-card">
+                    <img src="budovaskoly.jpg" alt="Budova SPŠE Prešov" title="Kde sa začína tvoja budúcnosť">
+                    <div class="caption">
+                        <h4>Naša základňa</h4>
+                        <p>Historická budova vybavená najmodernejšou technikou.</p>
+                    </div>
+                </div>
+
+                <!-- KARTA S FOTOGRAFIOU – UČEBŇA INFORMATIKY -->
+                <div class="photo-card">
+                    <img src="ucebnainformatiky.jpeg" alt="Učebňa informatiky" title="Miesto pre tvoj kód">
+                    <div class="caption">
+                        <h4>IT Svet</h4>
+                        <p>Tu meníme riadky kódu na fungujúce aplikácie.</p>
+                    </div>
+                </div>
+
+                <!-- KARTA S FOTOGRAFIOU – ŠKOLSKÉ IHRISKO -->
+                <div class="photo-card">
+                    <img src="ihrisko.jpg" alt="Školské ihrisko" title="Miesto pre tvoj relax">
+                    <div class="caption">
+                        <h4>Pohyb a tímovosť</h4>
+                        <p>Naše ihrisko je srdcom športových úspechov školy.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- PÄTIČKA STRÁNKY -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <!-- Autorské práva a informácie o projekte -->
+            <p>
+                &copy; 2026 Matej Kravec | Koncoročný projekt z TWS |
+                SPŠE Prešov - Budúcnosť v tvojich rukách
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT PRE INTERAKTIVITU -->
+    <script src="script.js"></script>
+</body>
+</html>

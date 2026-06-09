@@ -1,0 +1,677 @@
+/* ================================================
+   SPŠE PREŠOV - RESPONZÍVNY WEBOVÝ DIZAJN
+   Autor: Matej Kravec
+   ================================================ */
+
+/* RESET CSS - JEDNOTNÉ ZÁKLADY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+}
+
+/* ODKAZY */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+/* NADPISY */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: #003366;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 3px solid #003366;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-top: 1.5em;
+}
+
+/* KONTAJNER - CENTROVANIE */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ================================================
+   HLAVIČKA STRÁNKY (HEADER)
+   ================================================ */
+
+header {
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    color: white;
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 0;
+}
+
+header h1 a {
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* BURGER MENU TLAČIDLO - SKRYTÉ NA DESKTOP */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ================================================
+   NAVIGAČNÉ MENU
+   ================================================ */
+
+.nav-menu {
+    background-color: #002540;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5em 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    padding: 0.8em 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #003366;
+    text-decoration: none;
+}
+
+/* ================================================
+   HLAVNÝ OBSAH
+   ================================================ */
+
+.main-content {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+main {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+main p {
+    margin-bottom: 1em;
+    text-align: justify;
+    font-size: 1em;
+}
+
+main ul {
+    margin: 1em 0 1em 2em;
+}
+
+main ul li {
+    margin-bottom: 0.8em;
+}
+
+/* ================================================
+   TABUĽKY
+   ================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #fffacd;
+}
+
+/* ================================================
+   SLIDER S NOVINKAMI
+   ================================================ */
+
+.news-slider {
+    background-color: #e8f4f8;
+    border-left: 5px solid #003366;
+    padding: 1.5em;
+    margin: 2em 0;
+    border-radius: 5px;
+}
+
+.news-slider h3 {
+    margin-top: 0;
+}
+
+.slider-wrapper {
+    position: relative;
+    margin: 1em 0;
+    min-height: 80px;
+}
+
+.slider-content {
+    background: white;
+    padding: 1em;
+    border-radius: 5px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-prev {
+    left: -50px;
+}
+
+.slider-next {
+    right: -50px;
+}
+
+.slider-btn:hover {
+    background-color: #0052a3;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #003366;
+}
+
+/* ================================================
+   GALÉRIA
+   ================================================ */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-card .caption {
+    padding: 1.5em;
+}
+
+.photo-card h4 {
+    color: #003366;
+    margin-bottom: 0.5em;
+}
+
+.photo-card p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* ================================================
+   FORMULÁR
+   ================================================ */
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.required {
+    color: #d32f2f;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 0.9em 2em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0052a3;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 0.3em;
+}
+
+.submit-message {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.submit-message.success {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    display: block;
+}
+
+.submit-message.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+    display: block;
+}
+
+/* ================================================
+   KONTAKTNÉ INFORMÁCIE
+   ================================================ */
+
+.contact-info {
+    background-color: #f5f5f5;
+    padding: 2em;
+    border-radius: 8px;
+    margin-top: 2em;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin-bottom: 1em;
+}
+
+.contact-info a {
+    color: #0066cc;
+}
+
+/* ================================================
+   PÄTIČKA STRÁNKY (FOOTER)
+   ================================================ */
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 2em;
+    margin-top: 3em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ccc;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ================================================
+   RESPONZÍVNY DIZAJN - TABLET
+   ================================================ */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu.active {
+        max-height: 300px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu a {
+        padding: 1em;
+        border-bottom: 1px solid #001f35;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    main {
+        padding: 1.5em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 0.7em;
+    }
+
+    .slider-btn {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    .slider-prev {
+        left: auto;
+    }
+
+    .slider-next {
+        right: auto;
+    }
+}
+
+/* ================================================
+   RESPONZÍVNY DIZAJN - MOBILNÉ TELEFÓNY
+   ================================================ */
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 0.5em 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    main ul {
+        margin-left: 1.5em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .photo-card img {
+        height: 200px;
+    }
+
+    .photo-card .caption {
+        padding: 1em;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    th, td {
+        padding: 0.5em;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .contact-info {
+        padding: 1.5em;
+    }
+
+    footer {
+        padding: 1.5em;
+        font-size: 0.9em;
+    }
+}
+
+/* ================================================
+   PRÍSTUPNOSŤ
+   ================================================ */
+
+/* Kontrast textu - WCAG AA */
+body {
+    color: #333;
+    background-color: #f0f2f5;
+}
+
+main {
+    background-color: white;
+    color: #333;
+}
+
+button, .submit-btn {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Focus stavy pre klávesovú navigáciu */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* ================================================
+   TLAČ NA PAPIER
+   ================================================ */
+
+@media print {
+    body {
+        background-color: white;
+    }
+
+    header, footer, .nav-menu {
+        display: none;
+    }
+
+    main {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    a {
+        color: inherit;
+    }
+}
