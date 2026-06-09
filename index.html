@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <!-- Nastavenie kódovania znakov (diakritika) -->
+    <meta charset="UTF-8">
+
+    <!-- Zabezpečuje správne zobrazenie na mobilných zariadeniach -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Názov stránky zobrazovaný v karte prehliadača -->
+    <title>SPŠE Prešov | Budujeme tvoju IT budúcnosť</title>
+
+    <!-- Prepojenie externého CSS súboru -->
+    <link rel="stylesheet" href="x.css">
+    <!-- jQuery knižnica pre interaktivitu -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- HLAVIČKA STRÁNKY -->
+    <header>
+        <div class="header-content">
+            <!-- Tlačidlo pre burger menu na mobile -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Zmeň navigáciu">☰</button>
+
+            <!-- Názov školy – kliknutím sa vrátiš na úvodnú stránku -->
+            <h1>
+                <a href="PolrocnyProjekt.html" title="Návrat na domovskú stránku">
+                    SPŠE Prešov
+                </a>
+            </h1>
+
+            <!-- Logo školy -->
+            <div class="logo">
+                <a href="PolrocnyProjekt.html" title="Návrat na úvodnú stránku">
+                    <img src="logo.png" alt="Logo SPŠE Prešov">
+                </a>
+            </div>
+        </div>
+
+        <!-- NAVIGAČNÉ MENU -->
+        <nav id="mainNav" class="nav-menu">
+            <ul>
+                <li><a href="PolrocnyProjekt.html">Úvod</a></li>
+                <li><a href="Onas.html">O nás</a></li>
+                <li><a href="Galeria.html">Galéria</a></li>
+                <li><a href="kontakty.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HLAVNÝ OBSAH STRÁNKY -->
+    <div class="container main-content">
+
+        <!-- HLAVNÁ ČASŤ OBSAHU -->
+        <main role="main">
+            <!-- Hlavný nadpis -->
+            <h2>Formujeme generácie expertov</h2>
+
+            <!-- Úvodný text o škole -->
+            <p>
+                Sme Stredná priemyselná škola elektrotechnická v Prešove – inštitúcia s tradíciou a moderným prístupom.
+                Naším cieľom nie je len odovzdať teóriu, ale naučiť ťa riešiť reálne výzvy v dynamickom svete technológií.
+            </p>
+
+            <!-- Doplnkový opis -->
+            <p>
+                Či už ťa láka písanie kódu, kybernetická bezpečnosť alebo precízna elektronika,
+                u nás získaš základy, na ktorých postavíš svoju úspešnú kariéru.
+            </p>
+
+            <!-- SLIDER S NOVINKAMI -->
+            <div class="news-slider">
+                <h3>Čo je nové?</h3>
+                <div class="slider-wrapper">
+                    <div class="slider-content" id="sliderContent">
+                        <!-- Jednotlivé snímky budú načítané cez JavaScript -->
+                    </div>
+                    <button class="slider-btn slider-prev" id="sliderPrev" title="Predchádzajúca správa">❮</button>
+                    <button class="slider-btn slider-next" id="sliderNext" title="Ďalšia správa">❯</button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+
+            <!-- Nadpis sekcie so študijnými programami -->
+            <h3>Naše študijné programy</h3>
+
+            <!-- Tabuľka študijných odborov -->
+            <table role="presentation">
+                <thead>
+                    <tr>
+                        <th scope="col">Kód odboru</th>
+                        <th scope="col">Zameranie a názov odboru</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2561 M</td>
+                        <td>
+                            <strong>Informačné a sieťové technológie</strong> – Svet sietí, cloudu a vývoja.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2675 M</td>
+                        <td>
+                            <strong>Elektrotechnika</strong> – Od mikrokontrolérov až po priemyselnú automatizáciu.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+    </div>
+
+    <!-- PÄTIČKA STRÁNKY -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <!-- Autorské práva a informácie o projekte -->
+            <p>
+                &copy; 2026 Matej Kravec | Polročný projekt TWS | SPŠE Prešov – Tradícia v inováciách
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT PRE INTERAKTIVITU -->
+    <script src="script.js"></script>
+</body>
+</html>
